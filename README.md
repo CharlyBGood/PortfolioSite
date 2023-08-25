@@ -1,5 +1,4 @@
-# Salesforce DX Project for Carlos Bonavita Portfolio on Experience Cloud
-# builded using LWR and LWC.
+# Build a Salesforce Portfolio on Experience Cloud using LWR and LWC.
 
 # You can check a step by step of this project entering here: 
 
