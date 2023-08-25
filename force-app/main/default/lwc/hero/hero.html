@@ -1,10 +1,19 @@
 <template>
-    <div class="main-container slds-grid slds-grid_vertical">
-      <span class="slds-avatar slds-avatar_circle slds-avatar_large">
+    <div class="main-container slds-grid slds-grid_vertical slds-grid_vertical-align-center">
+      <!-- <span class="slds-avatar slds-avatar_circle slds-avatar_profile-image-large">
         <img alt="Person name" src={imageURL} title="Carlos Bonavita Selfie" />
-      </span>
-      <h1>My name is Carlos Bonavita</h1>
-      <p>Let's work together!!</p>
-      <lightning-button label="Contact Me"></lightning-button>
+      </span> -->
+      <div class="img-container">
+        <img class="img-class" alt="Person name" src={imageURL} title="Carlos Bonavita Selfie" />
+      </div>
+      <div class="presentation-container slds-grid slds-grid_vertical slds-grid_vertical-align-center">
+        <h1 class="slds-text-heading_large slds-var-m-around_xx-small slds-text-align_center">
+          My name is Carlos Bonavita          
+        </h1>
+        <p class="slds-text-heading_medium slds-var-m-around_xx-small slds-text-align_center">
+          Let's work together!!
+        </p>
+        <lightning-button class="slds-var-m-around_xx-small" onclick={handleClick} label="Contact Me"></lightning-button>
+      </div>      
     </div>
 </template>
