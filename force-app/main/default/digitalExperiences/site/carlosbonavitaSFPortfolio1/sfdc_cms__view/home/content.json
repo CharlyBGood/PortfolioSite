@@ -12,17 +12,9 @@
           },
           "children" : [ {
             "children" : [ {
-              "attributes" : {
-                "backgroundColor" : "",
-                "paddingHorizontal" : "none",
-                "paddingVertical" : "none",
-                "text" : "CARLOS BONAVITA PORTFOLIO TEST",
-                "textAlign" : "center",
-                "textDecoration" : "{}",
-                "textDisplayInfo" : "{\"textStyle\":\"heading-xlarge\",\"headingTag\":\"h1\"}"
-              },
-              "definition" : "dxp_base:textBlock",
-              "id" : "46cc6977-112b-4dd8-9971-b1353014811e",
+              "attributes" : { },
+              "definition" : "c:hero",
+              "id" : "65068693-638e-4b4b-9afe-27fc5d9f7509",
               "type" : "component"
             } ],
             "id" : "5235cf52-1240-4a9f-96cd-e41d3281d80e",
