@@ -1,6 +1,14 @@
 <template>
     <dialog class="contact-dialog">
       <h1>You're calling me!</h1>
+      <lightning-record-form>
+        <lightning-input type="text" label="First Name"></lightning-input>
+        <lightning-input type="text" label="Last Name"></lightning-input>
+        <lightning-input type="text" label="Company"></lightning-input>
+        <lightning-input type="email" label="Email"></lightning-input>
+        <lightning-textarea label="Write me about what you want" ></lightning-textarea>
+      </lightning-record-form>
+      <lightning-button label="Cancel" onclick={closeDialog}></lightning-button>
     </dialog>
-    <lightning-button label="Contact me" onclick={showDialog}></lightning-button>
+    <lightning-button class="slds-var-m-around_xx-small" label="Contact me" onclick={showDialog}></lightning-button>
 </template>
