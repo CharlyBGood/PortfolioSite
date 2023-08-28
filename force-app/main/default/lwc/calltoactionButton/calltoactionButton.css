@@ -5,3 +5,14 @@
   align-items: center;
   gap: 1em;
 }
+
+label, input, textarea {
+  display: block;
+  width: 100%;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+  gap: .5em;
+}
