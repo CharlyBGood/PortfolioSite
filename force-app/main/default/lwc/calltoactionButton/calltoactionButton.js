@@ -1,6 +1,7 @@
 import { LightningElement } from 'lwc';
 import createLead from '@salesforce/apex/ContactMeController.createLead';
 
+
 export default class CalltoactionButton extends LightningElement {
   dialog;
   firstName
@@ -8,6 +9,7 @@ export default class CalltoactionButton extends LightningElement {
   company;
   email;
   description;
+  snackbar;
 
   renderedCallback() {
     this.dialog = this.template.querySelector('.contact-dialog');
@@ -16,6 +18,7 @@ export default class CalltoactionButton extends LightningElement {
     this.company = this.template.querySelector('.company');
     this.email = this.template.querySelector('.email');
     this.description = this.template.querySelector('.description');
+    this.snackbar = this.template.querySelector('c-snackbar');
   }
 
   showDialog() {
@@ -33,13 +36,20 @@ export default class CalltoactionButton extends LightningElement {
     const companyVal = this.company.value;
     const emailVal = this.email.value;
     const descriptionVal = this.description.value;
+
     createLead({
       firstName: firstNameVal,
       lastName: lastNameVal,
       company: companyVal,
       email: emailVal,
       description: descriptionVal
+    })
+    .then(() => {this.snackbar.showSnackBar('Your message has been received.')})
+    .catch((error) => {
+      this.snackbar.showSnackBar('Unable to send the information.');
+      console.log(JSON-stringify(error));
     });
+    this.closeDialog();
   }
 
 }
