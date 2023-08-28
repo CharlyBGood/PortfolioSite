@@ -5,24 +5,21 @@
       <form class="form-style" onsubmit={handleSubmit}>
         <label class="slds-size_full" for="first-name">
           First Name
-          <input class="slds-size_full" type="text" name="first-name">
+          <input class="firstName slds-size_full" type="text" name="first-name">
         </label>
         <label class="slds-size_full" for="last-name">
           Last Name
-          <input class="slds-size_full" type="text" name="last-name">
+          <input class="lastName slds-size_full" type="text" name="last-name">
         </label>
         <label class="slds-size_full" for="company">
           Company
-          <input class="slds-size_full" type="text" name="company">
+          <input class="company slds-size_full" type="text" name="company">
         </label>
         <label class="slds-size_full" for="email">
           Email
-          <input class="slds-size_full" type="email" name="email">
+          <input class="email slds-size_full" type="email" name="email">
         </label>
-        <label class="slds-size_full" for="description">
-          Description
-          <textarea class="slds-size_full" name="description" cols="40" rows="4" placeholder="write me with ideas to work!"></textarea>       
-        </label>
+        <textarea class="description slds-size_full" name="description" cols="40" rows="4" placeholder="write me with ideas to work!"></textarea>
         <div class="btn-container">
           <input type="submit">
           <button onclick={closeDialog}>Cancel</button>
