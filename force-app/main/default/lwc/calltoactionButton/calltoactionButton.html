@@ -2,7 +2,7 @@
 <template>
     <dialog class="contact-dialog">
       <h1>Contact me!</h1>
-      <form class="form-style">
+      <form class="form-style" onsubmit={handleSubmit}>
         <label class="slds-size_full" for="first-name">
           First Name
           <input class="slds-size_full" type="text" name="first-name">
