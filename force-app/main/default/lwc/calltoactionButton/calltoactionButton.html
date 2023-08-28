@@ -1,15 +1,33 @@
+<!-- sldsValidatorIgnore -->
 <template>
     <dialog class="contact-dialog">
       <h1>You're calling me!</h1>
-      <lightning-record-form onsubmit={handleSubmit}>
-        <lightning-input class="firstName" type="text" label="First Name"></lightning-input>
-        <lightning-input class="lastName" type="text" label="Last Name"></lightning-input>
-        <lightning-input class="company" type="text" label="Company"></lightning-input>
-        <lightning-input class="email" type="email" label="Email"></lightning-input>
-        <lightning-textarea class="description" label="Write me about what you want" ></lightning-textarea>
-      </lightning-record-form>
-      <lightning-button type="submit"></lightning-button>
-      <lightning-button class="slds-var-m-around_xx-small" label="Cancel" onclick={closeDialog}></lightning-button>
-    </dialog>
-    <lightning-button class="slds-var-m-around_xx-small" label="Contact me" onclick={showDialog}></lightning-button>
+      <form class="form-style">
+        <label for="first-name">
+          First Name
+          <input type="text" name="first-name">
+        </label>
+        <label for="last-name">
+          Last Name
+          <input type="text" name="last-name">
+        </label>
+        <label for="company">
+          Company
+          <input type="text" name="company">
+        </label>
+        <label for="email">
+          Email
+          <input type="email" name="email">
+        </label>
+        <label for="description">
+          Description
+          <textarea name="description" cols="40" rows="4" placeholder="write me with ideas to work!"></textarea>       
+        </label>
+        <div class="btn-container">
+          <input type="submit">
+          <button onclick={closeDialog}>Cancel</button>
+        </div>
+      </form>
+    </dialog>    
+    <button class="launch-button" onclick={showDialog}>Contact Me</button>
 </template>
