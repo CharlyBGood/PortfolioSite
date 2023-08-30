@@ -47,7 +47,7 @@ export default class CalltoactionButton extends LightningElement {
     .then(() => {this.snackbar.showSnackBar('Your message has been send.')})
     .catch((error) => {
       this.snackbar.showSnackBar('Unable to send the form.');
-      console.log(JSON-stringify(error));
+      console.log(JSON.stringify(error));
     });
     this.closeDialog();
   }
